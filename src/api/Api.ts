@@ -1,7 +1,8 @@
 import axios from "axios";
 import { Expense } from "../types/expense";
 
-const API_URL = "http://localhost:8080";
+const API_URL = import.meta.env.VITE_API_URL;
+console.log(API_URL);
 
 // Fetch all expenses from the backend
 export const getExpenses = async (): Promise<Expense[]> => {
